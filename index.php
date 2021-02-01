@@ -4,6 +4,6 @@ require_once 'run/run.php';
 
 $app = new Run();
 
-// echo $app->render();
+echo $app->render();
 
-dump( $app->debug() );
+// dump( $app->debug() );

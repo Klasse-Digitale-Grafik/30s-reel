@@ -8,6 +8,9 @@
 
 	<?= css('style.css') ?>
 
+	<script>
+		window.siteData = <?= json_encode( $data ); ?>;
+    </script>
 </head>
 <body>
 
