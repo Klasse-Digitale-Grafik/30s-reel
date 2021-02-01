@@ -17,7 +17,7 @@ You can provide some metadata about your project using the `website.json` file l
   "title": "Project title /* string(60) */",
   "description": "Short description of your project /* string(200) */",
   "credits": "Your name, people or things you want to credit /* string(200) */",
-  "url": "https://... url to external project website /* string(200) */",
+  "link": "https://... url to external project website /* string(200) */",
 }
 ```
 

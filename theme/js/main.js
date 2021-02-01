@@ -1,17 +1,5 @@
-const sites = [
-  {
-    url: "https://p5js.org",
-    title: "p5.js"
-  },
-  {
-    url: "https://klassegrafik.de/",
-    title: "Klasse Grafik"
-  },
-  {
-    url: "http://digitale-grafik.com/",
-    title: "Klasse Digitale Grafik"
-  }
-];
+const sites = window.siteData;
+console.log( sites );
 
 let iframe = document.querySelector('iframe');
 const timebar = document.querySelector('#timebar');
@@ -35,7 +23,7 @@ function switchToNext() {
 
   document.body.insertBefore(iframe, timebar);
   iframe.frameBorder = "0";
-  iframe.src = shuffledList.pop().url;
+  iframe.src = shuffledList.pop().source;
 
   progressBar.classList.add('progressing');
 }

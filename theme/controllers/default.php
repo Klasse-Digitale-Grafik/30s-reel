@@ -13,9 +13,14 @@ function pageData( $page ): array {
         'title' => short( $page->title(), 60 ),
         'description' => short( $page->description(), 200 ),
         'credits' => short( $page->credits(), 200 ),
-        'url' => short( $page->url(), 200 ),
-        'source' => short( $page->source(), 200 ),
+        'url' => short( $page->url(), 200 )
     ];
+
+    if( $page->source() ){
+        $data['source'] = short( $page->source(), 200 );
+    } else {
+        $data['source'] = $page->path();
+    }
 
     return $data;
 }
