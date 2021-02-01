@@ -55,3 +55,7 @@ Run local PHP server
 ```
 php -S localhost:8000
 ```
+
+The data structure containing the content is available using the `$data` variable passed from the controller.
+
+Besides that, the `/json` endpoint always deliveres the current datastructure.
