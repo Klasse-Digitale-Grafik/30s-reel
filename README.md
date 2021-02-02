@@ -1,5 +1,5 @@
 # 30 second websites
-Archive of experimental websites made by students of Klasse Digitale Grafik at HFBK Hamburg.
+Archive of experimental websites made by students of Klasse Digitale Grafik at HFBK Hamburg: https://2020.digitale-grafik.com
 
 ## Submit your website
 
@@ -28,12 +28,12 @@ Your project can be hosted on our server.
 
 5. Upload your website into the directory you just created. `index.html` or `index.php` will be directory index.
 
+BTW: `https://2020.digitale-grafik.com/content/{YYYY-your-project-name}/` will be the direct url to your project, if you want to share it without the 30 seconds presentation.
+
 If you want to reference another website for further reading, add following line to the `website.json`:
 ```json
   "link": "https://... /* string(200) */"
 ```
-
-BTW: `/content/{YYYY-your-project-name}/` will be the direct url to your project, if you want to share it without the 30 seconds presentation.
 
 ### For larger websites or non-Apache hosting
 
@@ -53,3 +53,15 @@ If you need databases, backend, have a lot of heavy assets, need sophisticated s
 
 For external websites:
 - Please make sure your host allows our host for Cross-Origin-Resource-Sharing (CORS)
+
+## Development
+
+If you want to work on this project, clone the project via
+```
+git clone --recursive git@github.com:Klasse-Digitale-Grafik/30s-reel.git
+```
+and run it on you local PHP server.
+
+If it doesn’t work, check if the `run` directory is empty. If so, you will need to re-init all git submodules via `git submodule update --init`
+
+If you want to contribute your work, create a new branch or fork and issue a pull request.
