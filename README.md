@@ -44,18 +44,7 @@ If you need databases, backend, have a lot of heavy assets, please host your pro
 
 - Does your website work properly when you enter the website url directly?
 - Does your website allow iframe embeds?
-- Do you have `.htaccess` rules (e.g. rewrite) that conflicts with ours?
+- Do you have `.htaccess` rules (e.g. rewrite) that conflicts with the global ones?
 
 For external websites:
 - Please make sure your host allows our host for Cross-Origin-Resource-Sharing (CORS)
-
-## Development
-
-Run local PHP server
-```
-php -S localhost:8000
-```
-
-The data structure containing the content is available using the `$data` variable passed from the controller.
-
-Besides that, the `/json` endpoint always deliveres the current datastructure.
