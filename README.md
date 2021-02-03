@@ -14,9 +14,9 @@ Archive of experimental websites made by students of Klasse Digitale Grafik at H
 You can provide some metadata about your project using the `website.json` file like:
 ```json
 {
-  "title": "Project title /* string(60) */",
-  "description": "Short description of your project /* string(200) */",
-  "credits": "Your name, people or things you want to credit /* string(200) */"
+  "title": "Project title, max 60 characters",
+  "description": "Short description of your project, max 200 characters",
+  "credits": "Your name, people or things you want to credit, max 200 characters"
 }
 ```
 
@@ -32,7 +32,7 @@ BTW: `https://2020.digitale-grafik.com/content/{YYYY-your-project-name}/` will b
 
 If you want to reference another website for further reading, add following line to the `website.json`:
 ```json
-  "link": "https://... /* string(200) */"
+  "link": "https://..."
 ```
 
 ### For larger websites or non-Apache hosting
@@ -41,7 +41,7 @@ If you need databases, backend, have a lot of heavy assets, need sophisticated s
 
 5. Use the `website.json` file to provide a `source` url, from where the website can be embedded:
 ```json
-  "source": "https://... /* string(200) */"
+  "source": "https://..."
 ```
 
 ### Troubleshooting
