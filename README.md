@@ -3,7 +3,7 @@ Archive of experimental websites made by students of Klasse Digitale Grafik at H
 
 ## Submit your website
 
-1. Request a SFTP account to connect to our shared server
+1. Request a [FTP](https://github.com/Klasse-Digitale-Grafik/tutorials) account to connect to our shared server
 2. Go to the `content` directory
 3. Create a new folder like `YYYY-your-project-name`. Please note that you can only use `a-z0-9` and `-` characters
 
@@ -20,7 +20,7 @@ You can provide some metadata about your project using the `website.json` file l
 }
 ```
 
-Be careful to provide valid json and not accidentally add a comma after the last entry. All strings will be shortened to the length stated above.
+Be careful to provide valid [json](https://github.com/Klasse-Digitale-Grafik/tutorials/blob/main/JSON.md) and not accidentally add a comma after the last entry. All strings will be shortened to the length stated above.
 
 ### For small static or php websites
 
@@ -56,7 +56,7 @@ For external websites:
 
 ## Development
 
-If you want to work on this project, clone the project via
+If you want to work on this project, [clone](https://github.com/Klasse-Digitale-Grafik/tutorials/blob/main/GIT.md) the project via
 ```
 git clone --recursive git@github.com:Klasse-Digitale-Grafik/30s-reel.git
 ```
