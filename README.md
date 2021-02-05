@@ -52,7 +52,7 @@ If you need databases, backend, have a lot of heavy assets, need sophisticated s
 - Do you have `.htaccess` rules (e.g. rewrites) that conflicts with global settings? If so, try playing with the `RewriteBase` setting
 
 For external websites:
-- Please make sure your host allows our host for Cross-Origin-Resource-Sharing (CORS)
+- Please make sure your host allows our host for Cross-Origin-Resource-Sharing ([CORS](https://httptoolkit.tech/blog/how-to-debug-cors-errors/))
 
 ## Development
 
