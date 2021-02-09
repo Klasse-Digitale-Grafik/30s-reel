@@ -23,7 +23,10 @@ function switchToNext() {
 
   document.body.insertBefore(iframe, timebar);
   iframe.frameBorder = "0";
-  iframe.src = shuffledList.pop().source;
+
+  const nextSite = shuffledList.pop();
+  iframe.src = nextSite.source;
+  document.title = nextSite.title || 'hdgdl | xoxo';
 
   progressBar.classList.add('progressing');
 }
