@@ -5,9 +5,9 @@
 node_modules
 vendor
 
-# content
-# content/
-# content/**
+content
+content/
+content/**
 
 # temporary
 temporary/
