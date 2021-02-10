@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let iframe = document.querySelector('iframe');
   const timebar = document.querySelector('#timebar');
   const progressBar = document.querySelector('#progress');
-  const landingPage = document.querySelector('#landingPage');
+  const landingPage = document.querySelector('#landingpage');
 
   let shuffledList = [];
   let startReelTimeout = setTimeout(startReel, 10000);
