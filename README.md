@@ -54,6 +54,7 @@ There is an example in the [`content/template-for-external-websites.php`](https:
 
 For external websites:
 - Please make sure your host allows our host for Cross-Origin-Resource-Sharing ([CORS](https://httptoolkit.tech/blog/how-to-debug-cors-errors/))
+- You might will need HTTPS
 
 ## Development
 
