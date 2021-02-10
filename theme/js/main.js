@@ -1,53 +1,57 @@
-const sites = window.siteData;
+document.addEventListener("DOMContentLoaded", function() {
 
-let iframe = document.querySelector('iframe');
-const timebar = document.querySelector('#timebar');
-const progressBar = document.querySelector('#progress');
-const landingPage = document.querySelector('#landingPage');
+  const sites = window.siteData;
 
-let shuffledList = [];
-let startReelTimeout = setTimeout(startReel, 10000);
+  let iframe = document.querySelector('iframe');
+  const timebar = document.querySelector('#timebar');
+  const progressBar = document.querySelector('#progress');
+  const landingPage = document.querySelector('#landingPage');
 
-progressBar.addEventListener('animationend', switchToNext);
-landingPage.addEventListener('click', startReel);
+  let shuffledList = [];
+  let startReelTimeout = setTimeout(startReel, 10000);
+
+  progressBar.addEventListener('animationend', switchToNext);
+  landingPage.addEventListener('click', startReel);
 
 
 
-function startReel() {
-  landingPage.remove();
-  timebar.classList.remove('hidden');
-  iframe.classList.remove('hidden');
-  clearTimeout(startReelTimeout);
+  function startReel() {
+    landingPage.remove();
+    timebar.classList.remove('hidden');
+    iframe.classList.remove('hidden');
+    clearTimeout(startReelTimeout);
 
-  switchToNext();
-}
-
-function switchToNext() {
-  iframe.remove();
-  iframe = document.createElement("iframe");
-
-  if(!shuffledList.length) {
-    shuffledList = shuffle(sites.slice(0));
+    switchToNext();
   }
 
-  progressBar.classList.remove('progressing');
-  void progressBar.offsetWidth;
+  function switchToNext() {
+    iframe.remove();
+    iframe = document.createElement("iframe");
 
-  document.body.insertBefore(iframe, timebar);
-  iframe.frameBorder = "0";
+    if(!shuffledList.length) {
+      shuffledList = shuffle(sites.slice(0));
+    }
 
-  const nextSite = shuffledList.pop();
-  iframe.src = nextSite.source;
-  document.title = nextSite.title || 'hdgdl | xoxo';
+    progressBar.classList.remove('progressing');
+    void progressBar.offsetWidth;
 
-  progressBar.classList.add('progressing');
-  console.clear();
-}
+    document.body.insertBefore(iframe, timebar);
+    iframe.frameBorder = "0";
 
-function shuffle(a) {
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
+    const nextSite = shuffledList.pop();
+    iframe.src = nextSite.source;
+    document.title = nextSite.title || 'hdgdl | xoxo';
+
+    progressBar.classList.add('progressing');
+    console.clear();
   }
-  return a;
-}
+
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+});
