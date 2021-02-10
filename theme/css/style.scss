@@ -1,6 +1,20 @@
+@font-face {
+  font-family: 'Ginto';
+  src: url('theme/font/GintoRegularItalic.ttf') format('ttf');
+  font-weight: normal;
+  font-style: italic, oblique;
+}
+
 html, body {
+  background: #fff4ff;
+  z-index: -1;
+
+  font-family: 'Ginto';
+
+  width: 100%;
   height: 100%;
   margin: 0;
+
 }
 
 html {
@@ -23,9 +37,10 @@ iframe {
 
   * {
     position: fixed;
-    height: 4px;
+    height: 6px;
     width: 100%;
-    background-color: rgb(0, 60, 249);
+    background-color: #f1c4f1;
+
 
     &#bg {
       opacity: 0.2;
@@ -33,7 +48,7 @@ iframe {
 
     &#progress {
       width: 0;
-      box-shadow: 0px 0px 10px 0px rgb(193, 208, 255, 0.5);
+      box-shadow: -3px 0px 10px 0px #0000ff;
 
       &.progressing {
         animation: progress 30s linear;
@@ -42,7 +57,166 @@ iframe {
   }
 }
 
+.hidden {
+  display: none;
+}
+
 @keyframes progress {
   from { width: 0 }
   to { width: 100%; }
+}
+
+
+#landingpage {
+
+  .logo {
+    position: relative;
+    float: left;
+    margin: 3%;
+
+    * {
+      float: left;
+      position: relative
+    }
+
+    #logo{
+      width: 100%;
+      filter: drop-shadow(1px 2px 5px #0000ff);
+      // position: absolute;
+      top: 0;
+      left: 0;
+      z-index:3;
+      max-width: 40vw;
+    }
+
+    #meme1{
+      position: absolute;
+      width: 50vh;
+      top: 0;
+      left:0;
+      z-index: 3;
+      opacity: 50%;
+      max-width: 90vw;
+    }
+  }
+
+
+
+  #wolke{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    overflow: visible;
+    padding-left: -2;
+    top: 0;
+    left:0;
+  }
+
+
+  #wolke2 {
+    position: fixed;
+    width: 100%;
+    top:20vh;
+    right:0;
+    z-index: 2;
+
+  }
+
+  #wolke3 {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+
+
+
+  #meme2{
+    position: fixed;
+    width: 65vh;
+    bottom:0;
+    right: 0;
+    z-index:1;
+    opacity: 80%;
+    z-index: 3;
+    max-width: 100vw;
+  }
+
+  .text {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 6;
+
+    h1 {
+      text-align: center;
+      // width: 100%;
+      color: #f1c4f1;
+      filter: drop-shadow(2px 1px 8px #0000FF);
+      font-size: 25px;
+      line-height: 1;
+      cursor: pointer;
+      margin: auto 10%;
+      transform: translateY(-1.5vh);
+    }
+
+  }
+
+  #hdgdl{
+    width: 12vh;
+    opacity: 60%;
+    left: 25vw;
+    bottom:30vh;
+    transform: skewY(-10deg);
+    position: fixed;
+    z-index: 4;
+  }
+
+  #xoxo{
+    width: 12vh;
+    opacity: 60%;
+    right: 10vw;
+    top:10vw;
+    transform: skewY(10deg);
+    position: fixed;
+    z-index: 5;
+  }
+
+  @media only screen and (max-width: 600px){
+
+    .logo {
+      margin: 5%;
+
+      #logo {
+        width: 80%;
+      }
+    }
+
+    #hdgdl{
+      left: 10%;
+    }
+
+    .text {
+      h1 {
+        font-size: 28px;
+      }
+
+    }
+
+    .logo {
+      #meme1 {
+        opacity: 30%;
+      }
+    }
+
+    #meme2{
+      bottom: -10%;
+    }
+
+  }
 }

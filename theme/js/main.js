@@ -3,11 +3,24 @@ const sites = window.siteData;
 let iframe = document.querySelector('iframe');
 const timebar = document.querySelector('#timebar');
 const progressBar = document.querySelector('#progress');
+const landingPage = document.querySelector('#landingPage');
+
 let shuffledList = [];
+let startReelTimeout = setTimeout(startReel, 10000);
 
 progressBar.addEventListener('animationend', switchToNext);
+landingPage.addEventListener('click', startReel);
 
-switchToNext();
+
+
+function startReel() {
+  landingPage.remove();
+  timebar.classList.remove('hidden');
+  iframe.classList.remove('hidden');
+  clearTimeout(startReelTimeout);
+
+  switchToNext();
+}
 
 function switchToNext() {
   iframe.remove();
@@ -28,6 +41,7 @@ function switchToNext() {
   document.title = nextSite.title || 'hdgdl | xoxo';
 
   progressBar.classList.add('progressing');
+  console.clear();
 }
 
 function shuffle(a) {
