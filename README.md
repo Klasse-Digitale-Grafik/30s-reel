@@ -39,10 +39,11 @@ If you want to reference another website for further reading, add following line
 
 If you need databases, backend, have a lot of heavy assets, need sophisticated server setup, please host your project yourself.
 
-5. Use the `website.json` file to provide a `source` url, from where the website can be embedded:
-```json
-  "source": "https://..."
+5. Please setup a 301 redirect from within your folder to you external website you want to showcase.
+```php
+header("Location: https://your-external-website.com");
 ```
+There is an example in the [`content/template-for-external-websites.php`](https://github.com/Klasse-Digitale-Grafik/30s-reel/blob/master/content/template-for-external-websites.php) that you can copy.
 
 ### Troubleshooting
 
