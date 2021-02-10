@@ -1,5 +1,4 @@
 const sites = window.siteData;
-console.log( sites );
 
 let iframe = document.querySelector('iframe');
 const timebar = document.querySelector('#timebar');
