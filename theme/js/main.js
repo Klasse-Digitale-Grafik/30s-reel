@@ -24,6 +24,33 @@ document.addEventListener("DOMContentLoaded", function() {
     switchToNext();
   }
 
+  function switchToNext() {
+    iframe.remove();
+    iframe = document.createElement("iframe");
+
+    if(!shuffledList.length) {
+      shuffledList = shuffle(sites.slice(0));
+    }
+
+    progressBar.classList.remove('progressing');
+    progressBar.classList.remove('artur');
+    void progressBar.offsetWidth;
+
+    document.body.insertBefore(iframe, timebar);
+    iframe.frameBorder = "0";
+
+    const nextSite = shuffledList.pop();
+    iframe.src = nextSite.source;
+    document.title = nextSite.title || 'hdgdl | xoxo';
+
+    if(nextSite.title === "Your Last Video Call") {
+      progress.classList.add('artur');
+    } else {
+      progressBar.classList.add('progressing');
+    }
+    console.clear();
+  }
+
   function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -32,26 +59,15 @@ document.addEventListener("DOMContentLoaded", function() {
     return a;
   }
 
-});
+  document.addEventListener('keypress', logKey);
 
-function switchToNext() {
-  iframe.remove();
-  iframe = document.createElement("iframe");
+  function logKey(e) {
+    console.log(e.code);
 
-  if(!shuffledList.length) {
-    shuffledList = shuffle(sites.slice(0));
+    if (e.code == "KeyN") {
+        console.log("next")
+      switchToNext();
+    }
   }
 
-  progressBar.classList.remove('progressing');
-  void progressBar.offsetWidth;
-
-  document.body.insertBefore(iframe, timebar);
-  iframe.frameBorder = "0";
-
-  const nextSite = shuffledList.pop();
-  iframe.src = nextSite.source;
-  document.title = nextSite.title || 'hdgdl | xoxo';
-
-  progressBar.classList.add('progressing');
-  console.clear();
-}
+});

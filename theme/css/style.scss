@@ -59,6 +59,10 @@ iframe {
       &.progressing {
         animation: progress 30s linear;
       }
+
+      &.artur {
+        animation: progress 40s linear;
+      }
     }
   }
 }
