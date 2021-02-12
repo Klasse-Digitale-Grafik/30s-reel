@@ -5,11 +5,17 @@
   font-style: italic, oblique;
 }
 
+@font-face{
+  font-family: 'GintoWeb';
+  src: url("theme/font/GintoNormal-Thin.woff2") format("woff2");
+  font-style: italic, oblique;
+}
+
 html, body {
   background: #fff4ff;
   z-index: -1;
 
-  font-family: 'Ginto';
+  font-family: 'GintoWeb';
 
   width: 100%;
   height: 100%;
@@ -80,7 +86,7 @@ iframe {
     }
 
     #logo{
-      width: 100%;
+      width: 15vh;
       filter: drop-shadow(1px 2px 5px #0000ff);
       // position: absolute;
       top: 0;

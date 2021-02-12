@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const landingPage = document.querySelector('#landingpage');
 
   let shuffledList = [];
-  let startReelTimeout = setTimeout(startReel, 10000);
+  let startReelTimeout = setTimeout(startReel, 15000);
 
   progressBar.addEventListener('animationend', switchToNext);
   landingPage.addEventListener('click', startReel);
