@@ -24,28 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
     switchToNext();
   }
 
-  function switchToNext() {
-    iframe.remove();
-    iframe = document.createElement("iframe");
-
-    if(!shuffledList.length) {
-      shuffledList = shuffle(sites.slice(0));
-    }
-
-    progressBar.classList.remove('progressing');
-    void progressBar.offsetWidth;
-
-    document.body.insertBefore(iframe, timebar);
-    iframe.frameBorder = "0";
-
-    const nextSite = shuffledList.pop();
-    iframe.src = nextSite.source;
-    document.title = nextSite.title || 'hdgdl | xoxo';
-
-    progressBar.classList.add('progressing');
-    console.clear();
-  }
-
   function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -55,3 +33,25 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
 });
+
+function switchToNext() {
+  iframe.remove();
+  iframe = document.createElement("iframe");
+
+  if(!shuffledList.length) {
+    shuffledList = shuffle(sites.slice(0));
+  }
+
+  progressBar.classList.remove('progressing');
+  void progressBar.offsetWidth;
+
+  document.body.insertBefore(iframe, timebar);
+  iframe.frameBorder = "0";
+
+  const nextSite = shuffledList.pop();
+  iframe.src = nextSite.source;
+  document.title = nextSite.title || 'hdgdl | xoxo';
+
+  progressBar.classList.add('progressing');
+  console.clear();
+}
