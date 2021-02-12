@@ -7,7 +7,7 @@
 
 @font-face{
   font-family: 'GintoWeb';
-  src: url("theme/font/GintoNormal-Thin.woff2") format("woff2");
+  src: url("/theme/font/GintoNormal-Thin.woff2") format("woff2");
   font-style: italic, oblique;
 }
 
@@ -160,12 +160,13 @@ iframe {
     z-index: 6;
 
     h1 {
+      font-family: 'GintoWeb';
       text-align: center;
       // width: 100%;
       color: #f1c4f1;
       filter: drop-shadow(2px 1px 8px #0000FF);
-      font-size: 25px;
-      line-height: 1;
+      font-size: 32px;
+      line-height: 1.2;
       cursor: pointer;
       margin: auto 10%;
       transform: translateY(-1.5vh);
